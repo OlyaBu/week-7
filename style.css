@@ -34,13 +34,12 @@ body {
 .section1 {
     display: grid;
     background-image: url(./assets/Vid\ Gray\ BG.png);
-    grid-template-columns: 30% 30%;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 5%;
     margin: 10%;
     padding: 5%;
     font-size: large;
-
 }
 
 .section1text {
@@ -57,7 +56,7 @@ body {
     grid-area: 2/1/2/4;
     background: #CAEAC7;
     display: grid;
-    grid-column: 30% 30% 1fr;
+    grid-column: 3fr 3fr 2fr;
     grid-row: 1fr;
     gap: 5%;
     justify-content: center;
@@ -85,7 +84,7 @@ body {
 
     grid-area: 3/1/3/4;
     display: grid;
-    grid-column: 30% 30% 30%;
+    grid-column: 1fr 1fr 1fr;
     grid-row: 1fr;
     gap: 5%;
     margin: 10%;
@@ -127,7 +126,7 @@ body {
 button {
     color: whitesmoke;
     background-color: #4BA87D;
-    box-shadow: 1px solid darkgreen;
+    box-shadow: 1px;
     width: 200px;
     height: 65px;
     border-radius: 3px;
@@ -220,8 +219,6 @@ button {
     }
 
     img {
-        display: none
+        display: none;
     }
-
-    ;
 }
