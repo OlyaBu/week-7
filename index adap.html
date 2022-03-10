@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивность</title>
+</head>
+
+<style>
+    .header {
+        grid-area: header;
+        background: palegoldenrod;
+
+    }
+
+    .main {
+        grid-area: main;
+        background: greenyellow;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10%;
+    }
+
+    .section {
+        align-items: center;
+        border: 1px solid black;
+
+
+    }
+
+    .section3 {
+        border: 3px solid black;
+        grid-column: 1/3;
+    }
+
+    .aside {
+        grid-area: aside;
+        background: powderblue;
+    }
+
+    .footer {
+        grid-area: footer;
+        background: lightcoral;
+        display: grid;
+        Grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 5%;
+    }
+
+    .block {
+        border: 1px solid darkblue;
+        margin: 2px;
+    }
+
+    @media screen and (min-width:400px) and (max-width: 599px) {
+        .container {
+            display: grid;
+            height: 30vh;
+            width: 95%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "header header"
+                "aside aside"
+                "main main";
+
+        }
+
+        .footer {
+            display: none;
+        }
+
+        .aside {
+            height: 30vh;
+        }
+
+        .main {
+            height: 30vh;
+            background: fuchsia;
+        }
+
+        .header {
+            height: 100%;
+        }
+    }
+
+    @media screen and(min-width: 600px) {
+        .container {
+            display: grid;
+            height: 90vh;
+            width: 95%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 10% 1fr 10%;
+            grid-template-areas: " header header header header"
+                "main main main aside"
+                "footer footer footer footer";
+            font-size: large;
+        }
+
+    }
+
+    @media (max-width:399px) {
+        .footer {
+            display: none;
+
+        }
+
+        .aside {
+            display: none;
+        }
+
+        .header {
+            width: 30%;
+        }
+
+        .main {
+            width: 70%;
+        }
+
+    }
+</style>
+
+<body>
+    <h1> Адаптивность </h1>
+    <div class="container">
+        <header class="header"> Заголовок
+        </header>
+        <main class="main">
+            <section class="section">Секция 1</section>
+            <section class="section">Секция 2 </section>
+            <section class="section3"> Секция 3</section>
+
+        </main>
+        <aside class="aside">
+            боковая панель
+        </aside>
+        <footer class="footer">
+            <div class="block"> Блок 1 </div>
+            <div class="block"> Блок 2 </div>
+            <div class="block"> Блок 3 </div>
+            <div class="block"> Блок 4 </div>
+        </footer>
+
+</body>
+</div>
+
+</html>

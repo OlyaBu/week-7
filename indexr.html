@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнее задание с Гридами</title>
+    <style>
+        .head {
+            grid-column: 1/4;
+            background: pink;
+            grid-area: head;
+        }
+
+        .footer-container {
+            background: purple;
+            grid-area: footer;
+            display: grid;
+            Grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 10px;
+            width: 100%;
+        }
+
+
+        .container {
+            display: grid;
+            grid-template-rows: 10% 1fr 1fr 10%;
+            grid-template-columns: 70% 1fr 1fr;
+            height: 90vh;
+            width: 100%;
+            grid-template-areas:
+                "head head head head"
+                "main main main sidebar"
+                "footer footer footer footer";
+        }
+
+        .sf1,
+        .sf2,
+        .sf3,
+        .sf4 {
+            background: rgb(230, 151, 151);
+            border: 3px solid rgb(8, 236, 65);
+            padding: 5px;
+        }
+
+        .main {
+            background: burlywood;
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            border: 3px solid rgb(8, 236, 65);
+
+            width: 100%;
+        }
+
+        .mainin {
+            display: grid;
+            border: 3px solid rgb(188, 188, 209);
+            background: rgb(53, 196, 117);
+            padding: 5pх;
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+        }
+
+        .mainin2 {
+            display: grid;
+            border: 3px solid rgb(188, 188, 209);
+            background: rgb(53, 196, 117);
+            padding: 5pх;
+            width: 1fr;
+            grid-row: 1 /1;
+            grid-column: 2 / 3;
+        }
+
+        .mainin3 {
+            display: grid;
+            border: 3px solid rgb(48, 35, 230);
+            background: fuchsia;
+            grid-row: 2 / 3;
+            grid-column: 1 / 3;
+            width: 100%;
+            padding: 5pх;
+
+        }
+
+        .sidebar {
+            background: navy;
+            grid-area: sidebar;
+            height: auto;
+
+        }
+
+        body {
+            margin: 16em;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <header class="head">Заголовок</header>
+
+        <main class="main">
+            <div class="mainin"> что-то одно </div>
+            <div class="mainin2"> что-то другое </div>
+            <div class="mainin3"> что-то третье </div>
+
+        </main>
+        <aside class="sidebar"> Боковой блок </aside>
+        <footer class="footer-container">
+            <section class="sf1"> Блок 1 </section>
+            <section class="sf2"> Блок 2</section>
+            <section class="sf3"> Блок 3</section>
+            <section class="sf4"> Блок 4</section>
+        </footer>
+    </div>
+</body>
+
+</html>
