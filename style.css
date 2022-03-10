@@ -146,51 +146,82 @@ button {
             "main";
     }
 
-    @media screen and (min-width: 600px) {
-        .wrapper {
-            display: grid;
-            height: 90vh;
-            width: 95%;
-            grid-template-columns: 1fr 2fr 2fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-template-areas: "header header header header"
-                "main main main main"
-                "footer footer footer footer";
-        }
+    .footer {
+        display: none;
     }
 
-    @media screen and (min-width:400px) and (max-width: 599px) {
-        .wrapper {
-            display: grid;
-            height: 90vh;
-            width: 95%;
-            grid-template-columns: 1fr 2fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-template-areas: "header header header "
-                "main main main ";
-        }
-
-        .footer {
-            display: none;
-        }
-
-        button {
-            display: none;
-        }
-
-        .fotosection3-1 {
-            display: none;
-        }
-
-        .fotosection3-2 {
-            display: none;
-        }
-
-        .fotosection3-3 {
-            display: none;
-        }
-
-        .fotosection3-3 {
-            font-size: auto;
-        }
+    button {
+        display: none;
     }
+
+    .fotosection3-1 {
+        display: none;
+    }
+
+    .fotosection3-2 {
+        display: none;
+    }
+
+    .fotosection3-3 {
+        display: none;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .wrapper {
+        display: grid;
+        height: 90vh;
+        width: 95%;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "header header header header"
+            "main main main main"
+            "footer footer footer footer";
+    }
+}
+
+@media screen and (min-width:400px) and (max-width: 599px) {
+    .wrapper {
+        display: grid;
+        height: 90vh;
+        width: 95%;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "header header header "
+            "main main main ";
+    }
+
+    .footer {
+        display: none;
+    }
+
+    button {
+        display: none;
+    }
+
+    .fotosection3-1 {
+        display: none;
+    }
+
+    .fotosection3-2 {
+        display: none;
+    }
+
+    .fotosection3-3 {
+        display: none;
+    }
+
+    .section1foto {
+        display: none;
+    }
+
+    img {
+        display: none
+    }
+
+    ;
+}
